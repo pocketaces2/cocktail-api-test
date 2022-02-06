@@ -9,5 +9,10 @@ Feature: Test the search feature of the cocktail DB works correctly
     And I check the alcohol by volume is <expectedABV>%
 
     Examples:
-      | ingredient | expectedABV |
-      | Vodka      | 40          |
+      | ingredient          | expectedABV |
+      | Rum                 | 40          |
+      | Vodka               | 40          |
+      | Beer                | 4           |
+      | Lime_Juice          | null        |
+      | Salt                | null        |
+      | Baileys_Irish_Cream | 13          |

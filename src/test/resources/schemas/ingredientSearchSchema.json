@@ -31,19 +31,19 @@
           },
           "strDescription": {
             "id": "#/properties/ingredients/items/properties/strDescription",
-            "type": "string"
+            "type": ["string", "null"]
           },
           "strType": {
             "id": "#/properties/ingredients/items/properties/strType",
-            "type": "string"
+            "type": ["string", "null"]
           },
           "strAlcohol": {
             "id": "#/properties/ingredients/items/properties/strAlcohol",
-            "type": "string"
+            "type": ["string", "null"]
           },
           "strABV": {
             "id": "#/properties/ingredients/items/properties/strABV",
-            "type": "string"
+            "type": ["string", "null"]
           }
         }
       }
