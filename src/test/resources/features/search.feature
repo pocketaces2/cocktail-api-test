@@ -4,10 +4,10 @@ Feature: Test the search feature of the cocktail DB works correctly
     Given I check the cocktail DB is available
     When I submit a search request for <ingredient>
     Then I check the response matches the schema
-    Then I check the HTTP status code is 200
-    And I check the ingredient name is vodka
-    And I check the alcohol by volume is 40%
+    Then I check the HTTP response code indicates success
+    And I check the ingredient name is <ingredient>
+    And I check the alcohol by volume is <expectedABV>%
 
     Examples:
-      | ingredient |
-      | vodka           |
+      | ingredient | expectedABV |
+      | Vodka      | 40          |

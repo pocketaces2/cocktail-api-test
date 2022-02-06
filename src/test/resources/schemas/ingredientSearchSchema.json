@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "https://www.thecocktaildb.com/api/json/v1/1/search.php?i=vodka",
+  "type": "object",
+  "required": [
+    "ingredients"
+  ],
+  "properties": {
+    "ingredients": {
+      "id": "#/properties/ingredients",
+      "type": "array",
+      "items": {
+        "id": "#/properties/ingredients/items",
+        "type": "object",
+        "required": [
+          "idIngredient",
+          "strIngredient",
+          "strDescription",
+          "strType",
+          "strAlcohol",
+          "strABV"
+        ],
+        "properties": {
+          "idIngredient": {
+            "id": "#/properties/ingredients/items/properties/idIngredient",
+            "type": "string"
+          },
+          "strIngredient": {
+            "id": "#/properties/ingredients/items/properties/strIngredient",
+            "type": "string"
+          },
+          "strDescription": {
+            "id": "#/properties/ingredients/items/properties/strDescription",
+            "type": "string"
+          },
+          "strType": {
+            "id": "#/properties/ingredients/items/properties/strType",
+            "type": "string"
+          },
+          "strAlcohol": {
+            "id": "#/properties/ingredients/items/properties/strAlcohol",
+            "type": "string"
+          },
+          "strABV": {
+            "id": "#/properties/ingredients/items/properties/strABV",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
