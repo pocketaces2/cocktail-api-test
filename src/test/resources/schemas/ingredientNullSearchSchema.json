@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "https://www.thecocktaildb.com/api/json/v1/1/search.php?i=99999",
+  "type": "object",
+  "required": [
+    "ingredients"
+  ],
+  "properties": {
+    "ingredients": {
+      "id": "#/properties/ingredients",
+      "type": "null"
+    }
+  }
+}

@@ -1,6 +1,7 @@
 package steps;
 
 
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.response.Response;
@@ -16,33 +17,37 @@ public class SearchSteps {
 
     //TODO: enum?
     private static final int HTTP_200_OK_RESPONSE_CODE = 200;
+    RequestSpecification requestSpec;
     Response response;
+
+    @Before
+    public void setRequestSpec(){
+        requestSpec = given()
+                .baseUri("https://www.thecocktaildb.com/")
+                .basePath("/api/json/v1/1/");
+    }
 
     @Given("I check the cocktail DB is available")
     public void checkServiceAvailable(){
-
+        //Healthcheck call would be made here
     }
 
-    @Given("I submit a search request for {word}")
-    public void submitSearchRequest(String ingredient){
-        System.out.println("Submitting search request for " + ingredient);
-
-        RequestSpecification requestSpec = given()
-                .baseUri("https://www.thecocktaildb.com/")
-                .basePath("/api/json/v1/1/");
-
-        response = requestSpec.get(getSearchIngredientEndpoint(ingredient));
-        response.prettyPrint();
+    @Given("I submit an ingredient search request by id: {int}")
+    public void submitIngredientSearchById(int id){
+        System.out.println("Submitting search request for id: " + id);
+        submitRequest(getSearchIngredientByIdEndpoint(id));
     }
 
-    private String getSearchIngredientEndpoint(String ingredient){
-        return "search.php?i=" + ingredient;
+    @Given("I submit an ingredient search request by search term: {word}")
+    public void submitIngredientSearchByTerm(String searchTerm){
+        System.out.println("Submitting search request for term:" + searchTerm);
+        submitRequest(getSearchIngredientByTermEndpoint(searchTerm));
     }
 
-    @Then("I check the response matches the schema")
-    public void i_check_the_response_matches_the_schema() {
-        response.then().assertThat().body(matchesJsonSchemaInClasspath("schemas/ingredientSearchSchema.json"));
-        System.out.println("checking schema");
+    @Then("I check the response matches the schema: {word}")
+    public void i_check_the_response_matches_the_schema(String schemaPath) {
+        response.then().assertThat().body(matchesJsonSchemaInClasspath(schemaPath));
+        System.out.println("checking response schema");
     }
 
     @Then("I check the HTTP response code indicates success")
@@ -64,6 +69,24 @@ public class SearchSteps {
         expectedABV = expectedABV.equals("null") ? null: expectedABV;
         IngredientResponse ingredientResponse = getIngredientResponse();
         assertThat(ingredientResponse.getStrABV()).isEqualTo(expectedABV);
+    }
+
+    @Then("I check the ingredient search response is null")
+    public void i_check_the_ingredient_search_response_null(){
+        assertThat(response.body().jsonPath().getString("ingredients")).isNull();
+    }
+
+    private void submitRequest(String endpoint){
+        response = requestSpec.get(endpoint);
+        response.prettyPrint();
+    }
+
+    private String getSearchIngredientByTermEndpoint(String ingredient){
+        return "search.php?i=" + ingredient;
+    }
+
+    private String getSearchIngredientByIdEndpoint(int ingredient){
+        return "lookup.php?iid=" + ingredient;
     }
 
     private IngredientResponse getIngredientResponse() {
