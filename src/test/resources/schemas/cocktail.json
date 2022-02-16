@@ -1,0 +1,277 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=",
+  "type": "object",
+  "required": [
+    "drinks"
+  ],
+  "properties": {
+    "drinks": {
+      "id": "#/properties/drinks",
+      "type": "array",
+      "items": {
+        "id": "#/properties/drinks/items",
+        "type": "object",
+        "required": [
+          "idDrink",
+          "strDrink",
+          "strDrinkAlternate",
+          "strTags",
+          "strVideo",
+          "strCategory",
+          "strIBA",
+          "strAlcoholic",
+          "strGlass",
+          "strInstructions",
+          "strInstructionsES",
+          "strInstructionsDE",
+          "strInstructionsFR",
+          "strInstructionsIT",
+          "strInstructionsZH-HANS",
+          "strInstructionsZH-HANT",
+          "strDrinkThumb",
+          "strIngredient1",
+          "strIngredient2",
+          "strIngredient3",
+          "strIngredient4",
+          "strIngredient5",
+          "strIngredient6",
+          "strIngredient7",
+          "strIngredient8",
+          "strIngredient9",
+          "strIngredient10",
+          "strIngredient11",
+          "strIngredient12",
+          "strIngredient13",
+          "strIngredient14",
+          "strIngredient15",
+          "strMeasure1",
+          "strMeasure2",
+          "strMeasure3",
+          "strMeasure4",
+          "strMeasure5",
+          "strMeasure6",
+          "strMeasure7",
+          "strMeasure8",
+          "strMeasure9",
+          "strMeasure10",
+          "strMeasure11",
+          "strMeasure12",
+          "strMeasure13",
+          "strMeasure14",
+          "strMeasure15",
+          "strImageSource",
+          "strImageAttribution",
+          "strCreativeCommonsConfirmed",
+          "dateModified"
+        ],
+        "properties": {
+          "idDrink": {
+            "id": "#/properties/drinks/items/properties/idDrink",
+            "type": "string"
+          },
+          "strDrink": {
+            "id": "#/properties/drinks/items/properties/strDrink",
+            "type": "string"
+          },
+          "strDrinkAlternate": {
+            "id": "#/properties/drinks/items/properties/strDrinkAlternate",
+            "type": ["string", "null"]
+          },
+          "strTags": {
+            "id": "#/properties/drinks/items/properties/strTags",
+            "type": ["string", "null"]
+          },
+          "strVideo": {
+            "id": "#/properties/drinks/items/properties/strVideo",
+            "type": ["string", "null"]
+          },
+          "strCategory": {
+            "id": "#/properties/drinks/items/properties/strCategory",
+            "type": "string"
+          },
+          "strIBA": {
+            "id": "#/properties/drinks/items/properties/strIBA",
+            "type": ["string", "null"]
+          },
+          "strAlcoholic": {
+            "id": "#/properties/drinks/items/properties/strAlcoholic",
+            "type": "string"
+          },
+          "strGlass": {
+            "id": "#/properties/drinks/items/properties/strGlass",
+            "type": "string"
+          },
+          "strInstructions": {
+            "id": "#/properties/drinks/items/properties/strInstructions",
+            "type": "string"
+          },
+          "strInstructionsES": {
+            "id": "#/properties/drinks/items/properties/strInstructionsES",
+            "type": ["string", "null"]
+          },
+          "strInstructionsDE": {
+            "id": "#/properties/drinks/items/properties/strInstructionsDE",
+            "type": ["string", "null"]
+          },
+          "strInstructionsFR": {
+            "id": "#/properties/drinks/items/properties/strInstructionsFR",
+            "type": ["string", "null"]
+          },
+          "strInstructionsIT": {
+            "id": "#/properties/drinks/items/properties/strInstructionsIT",
+            "type": ["string", "null"]
+          },
+          "strInstructionsZH-HANS": {
+            "id": "#/properties/drinks/items/properties/strInstructionsZH-HANS",
+            "type": ["string", "null"]
+          },
+          "strInstructionsZH-HANT": {
+            "id": "#/properties/drinks/items/properties/strInstructionsZH-HANT",
+            "type": ["string", "null"]
+          },
+          "strDrinkThumb": {
+            "id": "#/properties/drinks/items/properties/strDrinkThumb",
+            "type": ["string", "null"]
+          },
+          "strIngredient1": {
+            "id": "#/properties/drinks/items/properties/strIngredient1",
+            "type": ["string", "null"]
+          },
+          "strIngredient2": {
+            "id": "#/properties/drinks/items/properties/strIngredient2",
+            "type": ["string", "null"]
+          },
+          "strIngredient3": {
+            "id": "#/properties/drinks/items/properties/strIngredient3",
+            "type": ["string", "null"]
+          },
+          "strIngredient4": {
+            "id": "#/properties/drinks/items/properties/strIngredient4",
+            "type": ["string", "null"]
+          },
+          "strIngredient5": {
+            "id": "#/properties/drinks/items/properties/strIngredient5",
+            "type": ["string", "null"]
+          },
+          "strIngredient6": {
+            "id": "#/properties/drinks/items/properties/strIngredient6",
+            "type": ["string", "null"]
+          },
+          "strIngredient7": {
+            "id": "#/properties/drinks/items/properties/strIngredient7",
+            "type": ["string", "null"]
+          },
+          "strIngredient8": {
+            "id": "#/properties/drinks/items/properties/strIngredient8",
+            "type": ["string", "null"]
+          },
+          "strIngredient9": {
+            "id": "#/properties/drinks/items/properties/strIngredient9",
+            "type": ["string", "null"]
+          },
+          "strIngredient10": {
+            "id": "#/properties/drinks/items/properties/strIngredient10",
+            "type": ["string", "null"]
+          },
+          "strIngredient11": {
+            "id": "#/properties/drinks/items/properties/strIngredient11",
+            "type": ["string", "null"]
+          },
+          "strIngredient12": {
+            "id": "#/properties/drinks/items/properties/strIngredient12",
+            "type": ["string", "null"]
+          },
+          "strIngredient13": {
+            "id": "#/properties/drinks/items/properties/strIngredient13",
+            "type": ["string", "null"]
+          },
+          "strIngredient14": {
+            "id": "#/properties/drinks/items/properties/strIngredient14",
+            "type": ["string", "null"]
+          },
+          "strIngredient15": {
+            "id": "#/properties/drinks/items/properties/strIngredient15",
+            "type": ["string", "null"]
+          },
+          "strMeasure1": {
+            "id": "#/properties/drinks/items/properties/strMeasure1",
+            "type": "string"
+          },
+          "strMeasure2": {
+            "id": "#/properties/drinks/items/properties/strMeasure2",
+            "type": ["string", "null"]
+          },
+          "strMeasure3": {
+            "id": "#/properties/drinks/items/properties/strMeasure3",
+            "type": ["string", "null"]
+          },
+          "strMeasure4": {
+            "id": "#/properties/drinks/items/properties/strMeasure4",
+            "type": ["string", "null"]
+          },
+          "strMeasure5": {
+            "id": "#/properties/drinks/items/properties/strMeasure5",
+            "type": ["string", "null"]
+          },
+          "strMeasure6": {
+            "id": "#/properties/drinks/items/properties/strMeasure6",
+            "type": ["string", "null"]
+          },
+          "strMeasure7": {
+            "id": "#/properties/drinks/items/properties/strMeasure7",
+            "type": ["string", "null"]
+          },
+          "strMeasure8": {
+            "id": "#/properties/drinks/items/properties/strMeasure8",
+            "type": ["string", "null"]
+          },
+          "strMeasure9": {
+            "id": "#/properties/drinks/items/properties/strMeasure9",
+            "type": ["string", "null"]
+          },
+          "strMeasure10": {
+            "id": "#/properties/drinks/items/properties/strMeasure10",
+            "type": ["string", "null"]
+          },
+          "strMeasure11": {
+            "id": "#/properties/drinks/items/properties/strMeasure11",
+            "type": ["string", "null"]
+          },
+          "strMeasure12": {
+            "id": "#/properties/drinks/items/properties/strMeasure12",
+            "type": ["string", "null"]
+          },
+          "strMeasure13": {
+            "id": "#/properties/drinks/items/properties/strMeasure13",
+            "type": ["string", "null"]
+          },
+          "strMeasure14": {
+            "id": "#/properties/drinks/items/properties/strMeasure14",
+            "type": ["string", "null"]
+          },
+          "strMeasure15": {
+            "id": "#/properties/drinks/items/properties/strMeasure15",
+            "type": ["string", "null"]
+          },
+          "strImageSource": {
+            "id": "#/properties/drinks/items/properties/strImageSource",
+            "type": ["string", "null"]
+          },
+          "strImageAttribution": {
+            "id": "#/properties/drinks/items/properties/strImageAttribution",
+            "type": ["string", "null"]
+          },
+          "strCreativeCommonsConfirmed": {
+            "id": "#/properties/drinks/items/properties/strCreativeCommonsConfirmed",
+            "type": ["string", "null"]
+          },
+          "dateModified": {
+            "id": "#/properties/drinks/items/properties/dateModified",
+            "type": ["string", "null"]
+          }
+        }
+      }
+    }
+  }
+}
