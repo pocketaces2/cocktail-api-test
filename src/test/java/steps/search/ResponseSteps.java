@@ -15,7 +15,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class ResponseSteps extends BaseStep {
 
-    private static final int HTTP_200_OK_RESPONSE_CODE = 200;
 
     private TestContext testContext;
 
@@ -33,6 +32,7 @@ public class ResponseSteps extends BaseStep {
 
     @Then("I check the HTTP response code indicates success")
     public void i_check_the_http_status_code_is(){
+        final int HTTP_200_OK_RESPONSE_CODE = 200;
         assertThat( testContext.getResponse().getStatusCode()).isEqualTo(HTTP_200_OK_RESPONSE_CODE);
         System.out.println("checking http 200");
     }
@@ -75,7 +75,6 @@ public class ResponseSteps extends BaseStep {
         for (String expectedIngredient : expectedIngredients){
             assertThat(actualCocktail.getIngredientList()).contains(expectedIngredient);
         }
-
     }
 
     @Then("I check the search response contain the following cocktails:")
