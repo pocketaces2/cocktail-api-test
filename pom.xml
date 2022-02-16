@@ -1,135 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <artifactId>cocktail-api-test</artifactId>
 
-    <groupId>groupId</groupId>
-    <artifactId>cocktail-api-test</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
-    <name>Cocktail api test</name>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <encoding>UTF-8</encoding>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
+        <groupId>org.apache.maven.plugins</groupId>
+        <version>${maven-compiler-plugin.version}</version>
+      </plugin>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <groupId>org.apache.maven.plugins</groupId>
+        <version>${maven-surefire-plugin.version}</version>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.8</java.version>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven-compiler-plugin.version>3.9.0</maven-compiler-plugin.version>
-        <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
+    <dependency>
+      <artifactId>cucumber-picocontainer</artifactId>
+      <groupId>io.cucumber</groupId>
+      <scope>test</scope>
+    </dependency>
 
-        <junit-bom.version>5.8.2</junit-bom.version>
-        <cucumber-bom.version>7.2.3</cucumber-bom.version>
-        <assertj-core.version>3.22.0</assertj-core.version>
-        <rest-assured.version>4.5.0</rest-assured.version>
-        <json-schema-validator.version>4.5.0</json-schema-validator.version>
-        <lombok.version>1.18.22</lombok.version>
+    <dependency>
+      <artifactId>lombok</artifactId>
+      <groupId>org.projectlombok</groupId>
+      <scope>provided</scope>
+      <version>${lombok.version}</version>
+    </dependency>
 
-    </properties>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.junit</groupId>
-                <artifactId>junit-bom</artifactId>
-                <version>${junit-bom.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>io.cucumber</groupId>
-                <artifactId>cucumber-bom</artifactId>
-                <version>${cucumber-bom.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+    <dependency>
+      <artifactId>assertj-core</artifactId>
+      <groupId>org.assertj</groupId>
+      <scope>test</scope>
+      <version>${assertj-core.version}</version>
+    </dependency>
 
+    <dependency>
+      <artifactId>rest-assured</artifactId>
+      <groupId>io.rest-assured</groupId>
+      <scope>test</scope>
+      <version>${rest-assured.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>json-schema-validator</artifactId>
+      <groupId>io.rest-assured</groupId>
+      <version>${json-schema-validator.version}</version>
+    </dependency>
+
+
+    <dependency>
+      <artifactId>cucumber-java</artifactId>
+      <groupId>io.cucumber</groupId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <artifactId>cucumber-junit-platform-engine</artifactId>
+      <groupId>io.cucumber</groupId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <artifactId>junit-platform-suite</artifactId>
+      <groupId>org.junit.platform</groupId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <artifactId>junit-jupiter</artifactId>
+      <groupId>org.junit.jupiter</groupId>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+  <dependencyManagement>
     <dependencies>
-
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-picocontainer</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>${assertj-core.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <version>${rest-assured.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>json-schema-validator</artifactId>
-            <version>${json-schema-validator.version}</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-junit-platform-engine</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-suite</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <scope>test</scope>
-        </dependency>
-
+      <dependency>
+        <artifactId>junit-bom</artifactId>
+        <groupId>org.junit</groupId>
+        <scope>import</scope>
+        <type>pom</type>
+        <version>${junit-bom.version}</version>
+      </dependency>
+      <dependency>
+        <artifactId>cucumber-bom</artifactId>
+        <groupId>io.cucumber</groupId>
+        <scope>import</scope>
+        <type>pom</type>
+        <version>${cucumber-bom.version}</version>
+      </dependency>
     </dependencies>
+  </dependencyManagement>
+  <groupId>groupId</groupId>
+  <modelVersion>4.0.0</modelVersion>
+
+  <name>Cocktail api test</name>
+
+  <packaging>jar</packaging>
+
+  <properties>
+    <assertj-core.version>3.22.0</assertj-core.version>
+    <cucumber-bom.version>7.2.3</cucumber-bom.version>
+    <java.version>1.8</java.version>
+    <json-schema-validator.version>4.5.0</json-schema-validator.version>
+    <junit-bom.version>5.8.2</junit-bom.version>
+    <lombok.version>1.18.22</lombok.version>
+
+    <maven-compiler-plugin.version>3.9.0</maven-compiler-plugin.version>
+    <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <rest-assured.version>4.5.0</rest-assured.version>
+
+  </properties>
 
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven-compiler-plugin.version}</version>
-                <configuration>
-                    <encoding>UTF-8</encoding>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${maven-surefire-plugin.version}</version>
-            </plugin>
-        </plugins>
-    </build>
+  <version>1.0-SNAPSHOT</version>
 
-    
+
 </project>
 

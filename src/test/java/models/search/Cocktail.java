@@ -65,10 +65,11 @@ public class Cocktail {
   private String strCreativeCommonsConfirmed;
   private Object dateModified;
 
-  public List<String> getIngredientList(){
+  public List<String> getIngredientList() {
     List<String> ingredientList = new ArrayList<>();
     Collections.addAll(ingredientList,
-        getStrIngredient1(), getStrIngredient2(), getStrIngredient3(), getStrIngredient4(), getStrIngredient5(), getStrIngredient6());
+        getStrIngredient1(), getStrIngredient2(), getStrIngredient3(), getStrIngredient4(),
+        getStrIngredient5(), getStrIngredient6());
 
     return ingredientList;
   }

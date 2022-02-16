@@ -5,7 +5,8 @@ import java.util.ArrayList;
 import lombok.Data;
 
 @Data
-public class CocktailSearchResponse{
+public class CocktailSearchResponse {
+
   @JsonProperty("drinks")
   private ArrayList<Cocktail> cocktails;
 }

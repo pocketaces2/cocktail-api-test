@@ -2,7 +2,9 @@
   "$schema": "http://json-schema.org/draft-04/schema",
   "id": "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=null",
   "type": "object",
-  "required": ["drinks"],
+  "required": [
+    "drinks"
+  ],
   "properties": {
     "drinks": {
       "id": "#/properties/drinks",
