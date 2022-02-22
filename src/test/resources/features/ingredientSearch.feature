@@ -4,7 +4,6 @@ Feature: Test the ingredient search feature of the cocktail DB works correctly
     Given I check the cocktail DB is available
     When I submit an ingredient search request by search name: <ingredient>
     Then I check the response matches the schema: schemas/ingredientSearchSchema.json
-    Then I check the HTTP response code indicates success
     And I check the ingredient name is <ingredient>
     And I check the alcohol by volume is <expectedABV>%
 
@@ -21,7 +20,6 @@ Feature: Test the ingredient search feature of the cocktail DB works correctly
     Given I check the cocktail DB is available
     When I submit an ingredient search request by id: <id>
     Then I check the response matches the schema: schemas/ingredientSearchSchema.json
-    Then I check the HTTP response code indicates success
     And I check the ingredient name is <ingredient>
     And I check the alcohol by volume is <expectedABV>%
 
@@ -36,5 +34,4 @@ Feature: Test the ingredient search feature of the cocktail DB works correctly
     Given I check the cocktail DB is available
     When I submit an ingredient search request by id: 999999
     Then I check the response matches the schema: schemas/ingredientNullSearchSchema.json
-    Then I check the HTTP response code indicates success
     Then I check the ingredient search response is null

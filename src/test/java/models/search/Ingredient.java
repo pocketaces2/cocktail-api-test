@@ -3,7 +3,7 @@ package models.search;
 import lombok.Data;
 
 @Data
-public class IngredientResponse {
+public class Ingredient {
 
   private String idIngredient;
   private String strIngredient;

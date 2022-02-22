@@ -84,6 +84,13 @@
       <scope>test</scope>
     </dependency>
 
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>${slf4j-simple.version}</version>
+      <scope>test</scope>
+    </dependency>
+
   </dependencies>
   <dependencyManagement>
     <dependencies>
@@ -117,14 +124,14 @@
     <json-schema-validator.version>4.5.0</json-schema-validator.version>
     <junit-bom.version>5.8.2</junit-bom.version>
     <lombok.version>1.18.22</lombok.version>
+    <rest-assured.version>4.5.0</rest-assured.version>
+    <slf4j-simple.version>1.7.36</slf4j-simple.version>
 
     <maven-compiler-plugin.version>3.9.0</maven-compiler-plugin.version>
     <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <rest-assured.version>4.5.0</rest-assured.version>
-
   </properties>
 
 
