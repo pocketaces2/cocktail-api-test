@@ -3,7 +3,7 @@ package steps;
 import io.cucumber.java.en.Given;
 import steps.context.TestContext;
 
-public class HealthSteps extends BaseStep{
+public class HealthSteps extends BaseStep {
 
   TestContext testContext;
 

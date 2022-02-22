@@ -45,7 +45,9 @@ public class ResponseSteps extends BaseStep {
 
   @Then("I check the ingredient search response is null")
   public void i_check_the_ingredient_search_response_null() {
-    assertThat(getIngredientSearchResponse().getResponse().body().jsonPath().getString("ingredients")).isNull();
+    assertThat(
+        getIngredientSearchResponse().getResponse().body().jsonPath().getString("ingredients"))
+        .isNull();
   }
 
   @Then("I check the response has returned exactly {int} drink(s)")
@@ -83,7 +85,7 @@ public class ResponseSteps extends BaseStep {
     }
   }
 
-  private ApiResponse<IngredientSearchResponse> getIngredientSearchResponse(){
+  private ApiResponse<IngredientSearchResponse> getIngredientSearchResponse() {
     return getScenarioContext().get(Context.API_RESPONSE);
   }
 

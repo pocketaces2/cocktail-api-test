@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
  *
  * @param <T> The Type of response object to deserialize the response into
  */
-public class ApiResponse<T>{
+public class ApiResponse<T> {
 
   private final T responseObject;
   private final Response response;
@@ -20,11 +20,12 @@ public class ApiResponse<T>{
   public ApiResponse(Class<T> model, Response response) {
     this.response = response;
 
-    try{
+    try {
       this.responseObject = response.as(model);
-    }catch (Exception e){
-      if (response.statusCode() == 200){
-        logger.warn("Response successful (HTTP 200) but could not parse api response as " + model.getName());
+    } catch (Exception e) {
+      if (response.statusCode() == 200) {
+        logger.warn("Response successful (HTTP 200) but could not parse api response as " + model
+            .getName());
       }
       throw e;
     }

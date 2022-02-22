@@ -5,5 +5,6 @@ import lombok.Data;
 
 @Data
 public class IngredientSearchResponse {
+
   private ArrayList<Ingredient> ingredients;
 }

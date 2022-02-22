@@ -19,7 +19,7 @@ public class EndPoints {
 
   private final RequestSpecification requestSpec;
 
-  public EndPoints(String baseUri, String basePath){
+  public EndPoints(String baseUri, String basePath) {
     RestAssured.baseURI = baseUri;
     RestAssured.basePath = basePath;
 
@@ -36,22 +36,22 @@ public class EndPoints {
     return getIngredientSearchResponse(response);
   }
 
-   public ApiResponse<CocktailSearchResponse> getCocktailSearchById(String payload) {
-     Response response = requestSpec.get(SEARCH_COCKTAIL_BY_ID.getRouteWithPayload(payload));
-     return getCocktailSearchResponse(response);
-    }
+  public ApiResponse<CocktailSearchResponse> getCocktailSearchById(String payload) {
+    Response response = requestSpec.get(SEARCH_COCKTAIL_BY_ID.getRouteWithPayload(payload));
+    return getCocktailSearchResponse(response);
+  }
 
   public ApiResponse<CocktailSearchResponse> getCocktailSearchByName(String payload) {
     Response response = requestSpec.get(SEARCH_COCKTAIL_BY_NAME.getRouteWithPayload(payload));
     return getCocktailSearchResponse(response);
   }
 
-  public ApiResponse<CocktailSearchResponse> getSearchRandomCocktail(){
+  public ApiResponse<CocktailSearchResponse> getSearchRandomCocktail() {
     Response response = requestSpec.get(RANDOM_COCKTAIL.getRoute());
     return getCocktailSearchResponse(response);
   }
 
-  private ApiResponse<IngredientSearchResponse> getIngredientSearchResponse(Response response){
+  private ApiResponse<IngredientSearchResponse> getIngredientSearchResponse(Response response) {
     response.prettyPrint();
     return new ApiResponse<>(IngredientSearchResponse.class, response);
   }

@@ -19,7 +19,7 @@ public enum Route {
     this.route = route;
   }
 
-  public String getRoute(){
+  public String getRoute() {
     return route;
   }
 
