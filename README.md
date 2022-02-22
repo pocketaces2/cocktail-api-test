@@ -5,3 +5,4 @@ A test framework for the cocktail database API using the following technologies:
 * Jackson
 * Lombok
 * AssertJ
+* slf4j
